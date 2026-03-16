@@ -30,7 +30,7 @@ RUN apt-get update && apt-get install -y \
 COPY requirements.txt .
 ENV PLAYWRIGHT_BROWSERS_PATH=/ms-playwright
 RUN pip install --no-cache-dir -r requirements.txt
-RUN patchright install chromium --with-deps 
+RUN playwright install
 
 # Copy the rest of the application
 COPY . .
